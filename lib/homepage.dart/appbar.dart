@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:insta/homepage.dart/Navigationbar.dart'; // ✅ Import your navigation bar
+import 'package:insta/homepage.dart/StoryBar.dart'; // ✅ Import your StoryBar widget
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,13 +14,8 @@ class HomePage extends StatelessWidget {
         foregroundColor: Colors.black,
         elevation: 0,
       ),
-      body: const Center(
-        child: Text(
-          "Feed Section Here",
-        ), // 👈 You can replace this with FeedSection
-      ),
-      bottomNavigationBar:
-          const InstagramBottomBar(), // ✅ This line shows the nav bar
+      body: const StoryBar(), // 👈 Replaced with StoryBar
+      bottomNavigationBar: const InstagramBottomBar(), // ✅ Navigation bar
     );
   }
 }
